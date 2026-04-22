@@ -1,6 +1,6 @@
 // 1
 function createLogger(prefix) {
-    return function strLogger(message) {
+    return function (message) {
         console.log(`${prefix}: ${message}`);
     };
 }
@@ -33,9 +33,8 @@ function createLimiter(limit) {
         if (count < limit) {
             count++;
             return "Ok";
-        } else {
-            return "Error";
         }
+        return "Error";
     };
 }
 
